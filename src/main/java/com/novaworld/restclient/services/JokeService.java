@@ -24,7 +24,7 @@ public class JokeService {
     }
 
     public String getJoke(String firstName, String secondName) {
-        String url = String.format("%s&firstName%s&secondName=%s", BASE, firstName, secondName);
+        String url = String.format("%s&firstName=%s&lastName=%s", BASE, firstName, secondName);
         JokeResponse response = restTemplate.getForObject(url, JokeResponse.class);
         String output = "";
         if (response != null) {
