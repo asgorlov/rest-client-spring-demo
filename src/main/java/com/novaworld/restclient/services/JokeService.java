@@ -16,7 +16,7 @@ public class JokeService {
 
     private static final String BASE = "http://api.icndb.com/jokes/random?limitTo=[nerdy]";
 
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     @Autowired
     public JokeService(RestTemplateBuilder builder) {
